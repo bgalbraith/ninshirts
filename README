@@ -1,1 +1,7 @@
 This is a Django-based web application designed to catalog and track vintage and current NIN t-shirts.
+
+Copy settings_local.template to settings_local.py and set the db settings and absolute paths as appropriate.
+Changes to settings.py should be limited to generally applicable or global project updates.
+
+Additionally, if running a standalone development environment without Apache integration, uncomment the
+appropriate lines in urls.py.
