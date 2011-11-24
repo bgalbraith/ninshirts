@@ -9,7 +9,7 @@ import settings
 
 urlpatterns = patterns('',
     url(r'^$', 'ninshirts.catalog.views.index'),
-    url(r'^(?P<collection>\w+)$', 'ninshirts.catalog.views.collection'),
+    url(r'^(?P<collection>\w+)/$', 'ninshirts.catalog.views.collection'),
     # Examples:
     # url(r'^$', 'ninshirts.views.home', name='home'),
     # url(r'^ninshirts/', include('ninshirts.foo.urls')),

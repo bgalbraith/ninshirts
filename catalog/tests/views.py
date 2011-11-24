@@ -1,4 +1,3 @@
-from django.core.urlresolvers import reverse
 from django.test import TestCase
 
 
@@ -12,5 +11,9 @@ class CatalogViewsTestCase(TestCase):
         self.assertEqual([collection.pk for collection in resp.context['collections']], [1])
 
     def test_collection(self):
-        resp = self.client.get('/the_spiral')
+        resp = self.client.get('/thisshouldfail404/')
+        self.assertEqual(resp.status_code, 404)
+
+        resp = self.client.get('/the_spiral/')
         self.assertEqual(resp.status_code, 200)
+        self.assertTrue('collection' in resp.context)
