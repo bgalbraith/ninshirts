@@ -6,5 +6,23 @@
             "name": "The Spiral",
             "tag": "the_spiral"
         }
+    },
+    {
+        "pk": 1,
+        "model": "catalog.shirt",
+        "fields": {
+            "collection": 1,
+            "name": "2006",
+            "tag": "2006"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "catalog.shirt",
+        "fields": {
+            "collection": 1,
+            "name": "2007",
+            "tag": "2007"
+        }
     }
 ]
