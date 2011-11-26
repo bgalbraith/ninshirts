@@ -17,7 +17,6 @@ class CatalogViewsTestCase(TestCase):
         shirt = collection.shirt_set.all()
         self.assertEqual(shirt[0].name, '2006')
         self.assertEqual(shirt[1].name, '2007')
-        
 
     def test_collection(self):
         resp = self.client.get('/thisshouldfail404/')
@@ -33,6 +32,9 @@ class CatalogViewsTestCase(TestCase):
 
     def test_shirt(self):
         resp = self.client.get('/the_spiral/thisshouldfail404/')
+        self.assertEqual(resp.status_code, 404)
+
+        resp = self.client.get('/thisshouldfail404/2006/')
         self.assertEqual(resp.status_code, 404)
 
         resp = self.client.get('/the_spiral/2006/')

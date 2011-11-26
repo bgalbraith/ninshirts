@@ -9,6 +9,7 @@ def collection(request, collection_tag):
     collection = get_object_or_404(Collection.objects.all(), tag=collection_tag)
     return render_to_response('catalog/collection.html', {'collection': collection})
 
-def shirt(request, shirt_tag):
-    shirt = get_object_or_404(Shirt.objects.all(), tag=shirt_tag)
+def shirt(request, collection_tag, shirt_tag):
+    collection = get_object_or_404(Collection.objects.all(), tag=collection_tag)
+    shirt = get_object_or_404(collection.shirt_set.all(), tag=shirt_tag)
     return render_to_response('catalog/shirt.html', {'shirt': shirt})
