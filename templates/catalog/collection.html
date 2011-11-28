@@ -1,1 +1,13 @@
 {% extends 'catalog/base.html' %}
+
+{% block content %}
+<div class="grid_16">
+<p><a href="{% url ninshirts.catalog.views.index %}">ninshirts.com</a></p>
+</div>
+<div class="clear"></div>
+{% for shirt in collection.shirt_set.all %}
+<div class="grid_3{% if forloop.first %} prefix_5{% endif %}{% if forloop.last %} suffix_5{% endif %}">
+<p><a href="{% url ninshirts.catalog.views.shirt collection.tag shirt.tag %}">{{ shirt.name }}</a></p>
+</div>
+{% endfor %}
+{% endblock %}

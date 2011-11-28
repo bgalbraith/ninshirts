@@ -9,6 +9,15 @@
         }
     },
     {
+        "pk": 2,
+        "model": "catalog.collection",
+        "fields": {
+            "name": "Wave Goodbye [2009]",
+            "tag": "wave_goodbye",
+            "description": "The Wave Goodbye Tour: 2009"
+        }
+    },
+    {
         "pk": 1,
         "model": "catalog.shirt",
         "fields": {
@@ -33,5 +42,32 @@
             "front": "",
             "back": ""
         }
+    },
+    {
+        "pk": 3,
+        "model": "catalog.shirt",
+        "fields": {
+            "collection": 2,
+            "name": "Aragon Theater (red)",
+            "tag": "aragon_theater_red",
+            "color": "red",
+            "description": "Gray NIN logo on front, tour date/location on back",
+            "front": "",
+            "back": ""
+        }
+    },
+    {
+        "pk": 4,
+        "model": "catalog.shirt",
+        "fields": {
+            "collection": 2,
+            "name": "Aragon Theater (gray)",
+            "tag": "aragon_theater_gray",
+            "color": "gray",
+            "description": "Red NIN logo on front, tour date/location on back",
+            "front": "",
+            "back": ""
+        }
     }
+
 ]

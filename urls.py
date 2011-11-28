@@ -4,16 +4,14 @@ from django.conf.urls.defaults import patterns, include, url
 import settings
 
 # Uncomment the next two lines to enable the admin:
-# from django.contrib import admin
-# admin.autodiscover()
+from django.contrib import admin
+admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', 'ninshirts.catalog.views.index'),
+    url(r'^admin/', include(admin.site.urls)),
     url(r'^(?P<collection_tag>\w+)/$', 'ninshirts.catalog.views.collection'),
     url(r'^(?P<collection_tag>\w+)/(?P<shirt_tag>\w+)/$', 'ninshirts.catalog.views.shirt'),
-    # Examples:
-    # url(r'^$', 'ninshirts.views.home', name='home'),
-    # url(r'^ninshirts/', include('ninshirts.foo.urls')),
 
     # Uncomment the next line if running standalone development
     url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT, 'show_indexes': True}),
@@ -22,5 +20,5 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    # url(r'^admin/', include(admin.site.urls)),
+
 )

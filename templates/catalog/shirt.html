@@ -1,1 +1,17 @@
 {% extends 'catalog/base.html' %}
+
+{% block content %}
+<div class="grid_16">
+<p><a href="{% url ninshirts.catalog.views.collection shirt.collection.tag %}">{{ shirt.collection.name }}</a></p>
+</div>
+<div class="clear"></div>
+
+<div class="grid_6 prefix_5 suffix_5">
+<ul>
+<li>Description: {{ shirt.description }}</li>
+<li>Color: {{ shirt.color }}</li>
+<li>Front: {{ shirt.front }}</li>
+<li>Back: {{ shirt.back }}</li>
+</ul>
+</div>
+{% endblock %}

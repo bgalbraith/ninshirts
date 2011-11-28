@@ -8,7 +8,7 @@ class CatalogViewsTestCase(TestCase):
         resp = self.client.get('/')
         self.assertEqual(resp.status_code, 200)
         self.assertTrue('collections' in resp.context)
-        self.assertEqual([collection.pk for collection in resp.context['collections']], [1])
+        self.assertEqual([collection.pk for collection in resp.context['collections']], [1, 2])
 
         collection = resp.context['collections'][0]
         self.assertEqual(collection.name, 'The Spiral')
