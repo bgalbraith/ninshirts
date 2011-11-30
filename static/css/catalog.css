@@ -1,9 +1,9 @@
 body {
-    background-color: black;
+    background-color: #111111;
     color: white;
 }
 
-p {
+h1, h2, p {
     text-align: center;
 }
 
@@ -14,4 +14,18 @@ a {
 
 ul {
     list-style: none;
+}
+
+li.l2 {
+    position: relative;
+    left: 20px;
+}
+
+#top_nav p {
+    background-color: #500000;
+}
+
+#products p {
+    background-color: #999999;
+    line-height: 200px;
 }

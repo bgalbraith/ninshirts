@@ -1,13 +1,28 @@
 {% extends 'catalog/base.html' %}
 
+{% block banner %}<h2>Merch</h2>{% endblock %}
 {% block content %}
-<div class="grid_16">
-<p>ninshirts.com</p>
-</div>
+<div class="prefix_5 grid_4"><p>Pagination and filters</p></div>
+<div id="products">
+<div class="alpha grid_3"><p>img</p></div>
+<div class="grid_3"><p>img</p></div>
+<div class="grid_3 omega"><p>img</p></div>
 <div class="clear"></div>
+<div class="alpha grid_3"><p>img</p></div>
+<div class="grid_3"><p>img</p></div>
+<div class="grid_3 omega"><p>img</p></div>
+<div class="clear"></div>
+<div class="alpha grid_3"><p>img</p></div>
+<div class="grid_3"><p>img</p></div>
+<div class="grid_3 omega"><p>img</p></div>
+</div>
+
+
+{% comment %}
 {% for category in categories %}
 <div class="grid_3{% if forloop.first %} prefix_5{% endif %}{% if forloop.last %} suffix_5{% endif %}">
 <p><a href="{% url ninshirts.catalog.views.category category.tag %}">{{ category.name }}</a></p>
 </div>
 {% endfor %}
+{% endcomment %}
 {% endblock %}
