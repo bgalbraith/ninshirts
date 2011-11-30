@@ -10,8 +10,8 @@ admin.autodiscover()
 urlpatterns = patterns('',
     url(r'^$', 'ninshirts.catalog.views.index'),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^(?P<collection_tag>\w+)/$', 'ninshirts.catalog.views.collection'),
-    url(r'^(?P<collection_tag>\w+)/(?P<shirt_tag>\w+)/$', 'ninshirts.catalog.views.shirt'),
+    url(r'^(?P<category_tag>\w+)/$', 'ninshirts.catalog.views.category'),
+    url(r'^(?P<category_tag>\w+)/(?P<product_tag>\w+)/$', 'ninshirts.catalog.views.product'),
 
     # Uncomment the next line if running standalone development
     url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT, 'show_indexes': True}),

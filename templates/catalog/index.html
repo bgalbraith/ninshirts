@@ -5,9 +5,9 @@
 <p>ninshirts.com</p>
 </div>
 <div class="clear"></div>
-{% for collection in collections %}
+{% for category in categories %}
 <div class="grid_3{% if forloop.first %} prefix_5{% endif %}{% if forloop.last %} suffix_5{% endif %}">
-<p><a href="{% url ninshirts.catalog.views.collection collection.tag %}">{{ collection.name }}</a></p>
+<p><a href="{% url ninshirts.catalog.views.category category.tag %}">{{ category.name }}</a></p>
 </div>
 {% endfor %}
 {% endblock %}

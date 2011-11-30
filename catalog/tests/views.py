@@ -7,30 +7,30 @@ class CatalogViewsTestCase(TestCase):
     def test_index(self):
         resp = self.client.get('/')
         self.assertEqual(resp.status_code, 200)
-        self.assertTrue('collections' in resp.context)
-        self.assertEqual([collection.pk for collection in resp.context['collections']], [1, 2])
+        self.assertTrue('categories' in resp.context)
+        self.assertEqual([category.pk for category in resp.context['categories']], [1, 2])
 
-        collection = resp.context['collections'][0]
-        self.assertEqual(collection.name, 'The Spiral')
-        self.assertEqual(collection.shirt_set.count(), 2)
+        category = resp.context['categories'][0]
+        self.assertEqual(category.name, 'The Spiral')
+        self.assertEqual(category.product_set.count(), 2)
 
-        shirt = collection.shirt_set.all()
-        self.assertEqual(shirt[0].name, '2006')
-        self.assertEqual(shirt[1].name, '2007')
+        product = category.product_set.all()
+        self.assertEqual(product[0].name, '2006')
+        self.assertEqual(product[1].name, '2007')
 
-    def test_collection(self):
+    def test_category(self):
         resp = self.client.get('/thisshouldfail404/')
         self.assertEqual(resp.status_code, 404)
 
         resp = self.client.get('/the_spiral/')
         self.assertEqual(resp.status_code, 200)
-        self.assertTrue('collection' in resp.context)
+        self.assertTrue('category' in resp.context)
 
-        collection = resp.context['collection']
-        self.assertEqual(collection.pk, 1)
-        self.assertEqual(collection.name, 'The Spiral')        
+        category = resp.context['category']
+        self.assertEqual(category.pk, 1)
+        self.assertEqual(category.name, 'The Spiral')        
 
-    def test_shirt(self):
+    def test_product(self):
         resp = self.client.get('/the_spiral/thisshouldfail404/')
         self.assertEqual(resp.status_code, 404)
 
@@ -39,8 +39,8 @@ class CatalogViewsTestCase(TestCase):
 
         resp = self.client.get('/the_spiral/2006/')
         self.assertTrue(resp.status_code, 200)
-        self.assertTrue('shirt' in resp.context)
+        self.assertTrue('product' in resp.context)
 
-        shirt = resp.context['shirt']
-        self.assertEqual(shirt.pk, 1)
-        self.assertEqual(shirt.name, '2006')
+        product = resp.context['product']
+        self.assertEqual(product.pk, 1)
+        self.assertEqual(product.name, '2006')

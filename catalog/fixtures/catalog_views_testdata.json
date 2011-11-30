@@ -1,7 +1,7 @@
 [
     {
         "pk": 1,
-        "model": "catalog.collection",
+        "model": "catalog.category",
         "fields": {
             "name": "The Spiral",
             "tag": "the_spiral",
@@ -10,7 +10,7 @@
     },
     {
         "pk": 2,
-        "model": "catalog.collection",
+        "model": "catalog.category",
         "fields": {
             "name": "Wave Goodbye [2009]",
             "tag": "wave_goodbye",
@@ -19,9 +19,9 @@
     },
     {
         "pk": 1,
-        "model": "catalog.shirt",
+        "model": "catalog.product",
         "fields": {
-            "collection": 1,
+            "categories": [1],
             "name": "2006",
             "tag": "2006",
             "color": "black",
@@ -32,9 +32,9 @@
     },
     {
         "pk": 2,
-        "model": "catalog.shirt",
+        "model": "catalog.product",
         "fields": {
-            "collection": 1,
+            "categories": [1],
             "name": "2007",
             "tag": "2007",
             "color": "black",
@@ -45,9 +45,9 @@
     },
     {
         "pk": 3,
-        "model": "catalog.shirt",
+        "model": "catalog.product",
         "fields": {
-            "collection": 2,
+            "categories": [2],
             "name": "Aragon Theater (red)",
             "tag": "aragon_theater_red",
             "color": "red",
@@ -58,9 +58,9 @@
     },
     {
         "pk": 4,
-        "model": "catalog.shirt",
+        "model": "catalog.product",
         "fields": {
-            "collection": 2,
+            "categories": [2],
             "name": "Aragon Theater (gray)",
             "tag": "aragon_theater_gray",
             "color": "gray",

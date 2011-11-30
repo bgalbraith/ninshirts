@@ -1,0 +1,17 @@
+{% extends 'catalog/base.html' %}
+
+{% block content %}
+<div class="grid_16">
+{% comment %}<p><a href="{% url ninshirts.catalog.views.category product.category.tag %}">{{ product.collection.name }}</a></p>{% endcomment %}
+</div>
+<div class="clear"></div>
+
+<div class="grid_6 prefix_5 suffix_5">
+<ul>
+<li>Description: {{ product.description }}</li>
+<li>Color: {{ product.color }}</li>
+<li>Front: {{ product.front }}</li>
+<li>Back: {{ product.back }}</li>
+</ul>
+</div>
+{% endblock %}
