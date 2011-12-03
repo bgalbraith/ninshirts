@@ -1,73 +1,74 @@
 [
     {
-        "pk": 1,
         "model": "catalog.category",
+        "pk": 1,
         "fields": {
-            "name": "The Spiral",
-            "tag": "the_spiral",
-            "description": "The official NIN fan club from 2005-2009"
+            "name": "Shirts",
+            "tag": "shirts",
+            "left_id": 2,
+            "right_id": 3
         }
     },
     {
+        "model": "catalog.category",
         "pk": 2,
-        "model": "catalog.category",
         "fields": {
-            "name": "Wave Goodbye [2009]",
-            "tag": "wave_goodbye",
-            "description": "The Wave Goodbye Tour: 2009"
+            "name": "Posters",
+            "tag": "posters",
+            "left_id": 4,
+            "right_id": 5
         }
     },
     {
-        "pk": 1,
         "model": "catalog.product",
+        "pk": 1,
         "fields": {
             "categories": [1],
-            "name": "2006",
-            "tag": "2006",
+            "name": "Eraser T",
+            "tag": "eraser-t",
             "color": "black",
-            "description": "White nautilus shell image on front, The Spiral text on back",
+            "description": "",
             "front": "",
             "back": ""
         }
     },
     {
-        "pk": 2,
         "model": "catalog.product",
+        "pk": 2,
         "fields": {
             "categories": [1],
-            "name": "2007",
-            "tag": "2007",
-            "color": "black",
-            "description": "Red nautilus shell around the side, The Spiral text on back",
+            "name": "Art Is Resistance Womens T",
+            "tag": "art-is-resistance-womens-t",
+            "color": "green",
+            "description": "",
             "front": "",
             "back": ""
         }
     },
     {
+        "model": "catalog.product",
         "pk": 3,
-        "model": "catalog.product",
         "fields": {
             "categories": [2],
-            "name": "Aragon Theater (red)",
-            "tag": "aragon_theater_red",
-            "color": "red",
-            "description": "Gray NIN logo on front, tour date/location on back",
+            "name": "Chicago 07/01/06 Poster",
+            "tag": "chicago-07-01-06",
+            "color": "n/a",
+            "description": "",
             "front": "",
             "back": ""
         }
     },
     {
-        "pk": 4,
         "model": "catalog.product",
+        "pk": 4,
         "fields": {
             "categories": [2],
-            "name": "Aragon Theater (gray)",
-            "tag": "aragon_theater_gray",
-            "color": "gray",
-            "description": "Red NIN logo on front, tour date/location on back",
+            "name": "Boston 06/23/06",
+            "tag": "boston-06-23-06",
+            "color": "n/a",
+            "description": "",
             "front": "",
             "back": ""
         }
     }
-
 ]
