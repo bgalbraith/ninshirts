@@ -10,6 +10,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     url(r'^$', 'ninshirts.catalog.views.index'),
     url(r'^admin/', include(admin.site.urls)),
+
     url(r'^(?P<category_tag>[a-z0-9-]+)/$', 'ninshirts.catalog.views.category'),
     url(r'^(?P<category_tag>[a-z0-9-]+)/(?P<product_tag>[a-z0-9-]+)/$', 'ninshirts.catalog.views.product'),
 

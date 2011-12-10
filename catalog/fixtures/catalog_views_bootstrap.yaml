@@ -1,0 +1,370 @@
+- model: catalog.category
+  pk: 1
+  fields:
+    name: Apparel
+    tag: apparel
+    left_id: 1
+    right_id: 14
+
+- model: catalog.category
+  pk: 2
+  fields:
+    name: Shirts
+    tag: shirts
+    left_id: 2
+    right_id: 9
+
+- model: catalog.category
+  pk: 3
+  fields:
+    name: T-Shirts
+    tag: t-shirts
+    left_id: 3
+    right_id: 4
+
+- model: catalog.category
+  pk: 4
+  fields:
+    name: Hoodies
+    tag: hoodies
+    left_id: 5
+    right_id: 6
+
+- model: catalog.category
+  pk: 5
+  fields:
+    name: Long Sleeve Shirts
+    tag: long-sleeve-shirts
+    left_id: 7
+    right_id: 8
+
+- model: catalog.category
+  pk: 6
+  fields:
+    name: Men's
+    tag: mens
+    left_id: 10
+    right_id: 11
+
+- model: catalog.category
+  pk: 7
+  fields:
+    name: Women's
+    tag: womens
+    left_id: 12
+    right_id: 13
+
+- model: catalog.category
+  pk: 8
+  fields:
+    name: Posters
+    tag: posters
+    left_id: 15
+    right_id: 16
+
+- model: catalog.category
+  pk: 9
+  fields:
+    name: Tours
+    tag: tours
+    left_id: 17
+    right_id: 22
+
+- model: catalog.category
+  pk: 10
+  fields:
+    name: 'Live: With Teeth Tour'
+    tag: live-with-teeth-tour
+    left_id: 18
+    right_id: 21
+
+- model: catalog.category
+  pk: 11
+  fields:
+    name: 'Live: With Teeth Summer Amphitheater Tour'
+    tag: live-with-teeth-summer-amphitheater-tour
+    left_id: 19
+    right_id: 20
+
+- model: catalog.category
+  pk: 12
+  fields:
+    name: Records
+    tag: records
+    left_id: 22
+    right_id: 37
+
+- model: catalog.category
+  pk: 13
+  fields:
+    name: Pretty Hate Machine
+    tag: pretty-hate-machine
+    left_id: 23
+    right_id: 24
+
+- model: catalog.category
+  pk: 14
+  fields:
+    name: Broken
+    tag: broken
+    left_id: 25
+    right_id: 26
+
+- model: catalog.category
+  pk: 15
+  fields:
+    name: The Downward Spiral
+    tag: the-downward-spiral
+    left_id: 27
+    right_id: 28
+
+- model: catalog.category
+  pk: 16
+  fields:
+    name: With Teeth
+    tag: with-teeth
+    left_id: 29
+    right_id: 30
+
+- model: catalog.category
+  pk: 17
+  fields:
+    name: Year Zero
+    tag: year-zero
+    left_id: 31
+    right_id: 32
+
+- model: catalog.category
+  pk: 18
+  fields:
+    name: Ghosts I-IV
+    tag: ghosts-i-iv
+    left_id: 33
+    right_id: 34
+
+- model: catalog.category
+  pk: 19
+  fields:
+    name: The Slip
+    tag: the-slip
+    left_id: 35
+    right_id: 36
+
+- model: catalog.category
+  pk: 20
+  fields:
+    name: Venues
+    tag: venues
+    left_id: 38
+    right_id: 43
+
+- model: catalog.category
+  pk: 21
+  fields:
+    name: Chicago
+    tag: chicago
+    left_id: 39
+    right_id: 40
+
+- model: catalog.category
+  pk: 22
+  fields:
+    name: Boston
+    tag: boston
+    left_id: 41
+    right_id: 42
+
+
+- model: catalog.product
+  pk: 1
+  fields:
+    categories:
+      - 3
+      - 6
+      - 19
+    name: 4 Of Us Are Dying Men's T-Shirt
+    tag: 4-of-us-are-dying-mens-t-shirt
+    color: dark grey
+    description: ''
+    front: ''
+    back: ''
+
+- model: catalog.product
+  pk: 2
+  fields:
+    categories:
+      - 3
+      - 7
+      - 17
+    name: Art Is Resistance Women's T-Shirt
+    tag: art-is-resistance-womens-t-shirt
+    color: green
+    description: ''
+    front: ''
+    back: ''
+
+- model: catalog.product
+  pk: 3
+  fields:
+    categories:
+      - 3
+      - 7
+      - 18
+    name: Birds Women's T-Shirt
+    tag: birds-womens-t-shirt
+    color: black
+    description: ''
+    front: ''
+    back: ''
+
+- model: catalog.product
+  pk: 4
+  fields:
+    categories:
+      - 8
+      - 11
+      - 16
+      - 22
+    name: Boston 2006.06.23 Poster
+    tag: boston-2006-06-23-poster
+    color: ''
+    description: ''
+    front: ''
+    back: ''
+
+- model: catalog.product
+  pk: 5
+  fields:
+    categories:
+      - 8
+      - 11
+      - 16
+      - 21
+    name: Chicago 2006.07.01 Poster
+    tag: chicago-2006-07-01-poster
+    color: ''
+    description: ''
+    front: ''
+    back: ''
+
+- model: catalog.product
+  pk: 6
+  fields:
+    categories:
+      - 5
+      - 14
+    name: Broken Long Sleeve Shirt
+    tag: broken-long-sleeve-shirt
+    color: white
+    description: ''
+    front: ''
+    back: ''
+
+- model: catalog.product
+  pk: 7
+  fields:
+    categories:
+      - 3
+      - 6
+      - 19
+    name: Discipline Men's T-Shirt
+    tag: discipline-mens-t-shirt
+    color: black
+    description: ''
+    front: ''
+    back: ''
+
+- model: catalog.product
+  pk: 8
+  fields:
+    categories:
+      - 3
+      - 6
+      - 19
+    name: Head Down Men's T-Shirt
+    tag: head-down-mens-t-shirt
+    color: dark grey
+    description: ''
+    front: ''
+    back: ''
+
+- model: catalog.product
+  pk: 9
+  fields:
+    categories:
+      - 3
+      - 6
+      - 15
+    name: Eraser Men's T-Shirt
+    tag: eraser-mens-t-shirt
+    color: black
+    description: ''
+    front: ''
+    back: ''
+
+- model: catalog.product
+  pk: 10
+  fields:
+    categories:
+      - 4
+    name: Now I'm Nothing Hoodie
+    tag: now-im-nothing-hoodie
+    color: black
+    description: ''
+    front: ''
+    back: ''
+
+- model: catalog.product
+  pk: 11
+  fields:
+    categories:
+      - 4
+      - 13
+    name: Pretty Hate Machine 2010 Hoodie
+    tag: pretty-hate-machine-2010-hoodie
+    color: black
+    description: ''
+    front: ''
+    back: ''
+
+- model: catalog.product
+  pk: 12
+  fields:
+    categories:
+      - 3
+      - 6
+      - 13
+    name: Pretty Hate Machine 2010 Men's T-Shirt
+    tag: pretty-hate-machine-mens-t-shirt
+    color: black
+    description: ''
+    front: ''
+    back: ''
+
+- model: catalog.product
+  pk: 13
+  fields:
+    categories:
+      - 3
+      - 7
+      - 13
+    name: Sin Women's T-Shirt
+    tag: sin-womens-t-shirt
+    color: red
+    description: ''
+    front: ''
+    back: ''
+
+- model: catalog.product
+  pk: 14
+  fields:
+    categories:
+      - 5
+      - 7
+      - 13
+    name: With Teeth Thermal Long Sleeve Shirt
+    tag: with-teeth-thermal-long-sleeve-shirt
+    color: black
+    description: ''
+    front: ''
+    back: ''
