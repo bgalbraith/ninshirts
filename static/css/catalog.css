@@ -18,7 +18,12 @@ ul {
 
 li.l2 {
     position: relative;
-    left: 20px;
+    left: 15px;
+}
+
+li.l3 {
+    position: relative;
+    left: 30px;
 }
 
 #top_nav p {
@@ -27,5 +32,14 @@ li.l2 {
 
 #products p {
     background-color: #999999;
-    line-height: 200px;
+    height: 100px;
+    padding-top: 80px;
+}
+
+#product {
+    text-align: center;
+}
+
+#product ul {
+    text-align: left;
 }

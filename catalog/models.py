@@ -2,6 +2,7 @@ from django.db import models
 from itertools import chain
 
 class Category(models.Model):
+    parent = models.ForeignKey('Category', null=True)
     name = models.CharField(max_length=200)
     tag = models.CharField(max_length=200)
     left_id = models.IntegerField()
@@ -24,8 +25,17 @@ class Product(models.Model):
     tag = models.CharField(max_length=200)
     color = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
-    front = models.ImageField(upload_to='shirts', blank=True)
-    back = models.ImageField(upload_to='shirts', blank=True)
+    front = models.ImageField(upload_to='products', blank=True)
+    back = models.ImageField(upload_to='products', blank=True)
 
     def __unicode__(self):
         return self.name
+
+    def deep_categories(self):
+        categories = list(self.categories.all())
+        for category in self.categories.all():
+            parent = category.parent
+            while parent:
+                categories.append(parent)
+                parent = parent.parent
+        return categories

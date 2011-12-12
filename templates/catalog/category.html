@@ -5,20 +5,21 @@
 {% block content %}
 <div class="prefix_5 grid_4"><p>Pagination and filters</p></div>
 <div id="products">
-<div class="alpha grid_3"><p>img</p></div>
-<div class="grid_3"><p>img</p></div>
-<div class="grid_3 omega"><p>img</p></div>
-<div class="clear"></div>
-<div class="alpha grid_3"><p>img</p></div>
-<div class="grid_3"><p>img</p></div>
-<div class="grid_3 omega"><p>img</p></div>
-<div class="clear"></div>
-<div class="alpha grid_3"><p>img</p></div>
-<div class="grid_3"><p>img</p></div>
-<div class="grid_3 omega"><p>img</p></div>
+{% for product in category.products %}
+{% if forloop.counter0|divisibleby:"3" %}
+<div class="grid_9">&nbsp;</div>
+{% endif %}
+<div class="grid_3{% if forloop.counter0|divisibleby:"3" %} alpha{% endif %}{% if forloop.counter0|add:"-2"|divisibleby:"3" %} omega{% endif %}">
+    <a href="{% url ninshirts.catalog.views.product category.tag product.tag %}">
+        <img width="200" height="200" src="/static/img/{{ product.front.url }}"/>
+    </a>
+</div>
+{% endfor %}
 </div>
 
 {% comment %}
+<div class="alpha grid_3"><p>img</p></div>
+<div class="grid_3 omega"><p>img</p></div>
 {% block content %}
 <div class="grid_16">
 <p><a href="{% url ninshirts.catalog.views.index %}">ninshirts.com</a></p>
