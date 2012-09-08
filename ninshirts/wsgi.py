@@ -15,6 +15,7 @@ framework.
 """
 import os
 import sys
+import site
 
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
@@ -22,6 +23,9 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 if BASE_DIR not in sys.path:
     sys.path.append(BASE_DIR)
     sys.path.append(PROJECT_DIR)
+
+# assumes that the entire project is inside the virtualenv directory
+site.addsitedir(BASE_DIR + '/../lib/python2.7/site-packages')
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "ninshirts.settings")
 
