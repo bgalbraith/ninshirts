@@ -1,6 +1,6 @@
 from django.shortcuts import render_to_response, get_object_or_404
 from django.http import Http404
-from catalog.models import Category, Product
+from apps.catalog.models import Category, Product
 
 def index(request):
     categories = Category.objects.all()

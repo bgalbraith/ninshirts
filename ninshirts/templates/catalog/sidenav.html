@@ -1,4 +1,8 @@
 <ul>
+    {% for category in categories %}
+        <li class="{{ category.css }}"><a href="{{ category.url }}">{{ category.label }}</a></li>
+    {% endfor %}
+{% comment %}
   <li class="l1"><a href="/apparel/">Apparel</a></li>
     <li class="l2"><a href="/shirts/">Shirts</a></li>
       <li class="l3"><a href="/t-shirts/">T-Shirts</a></li>
@@ -21,4 +25,5 @@
   <li class="l1"><a href="/venues/">Venues</a></li>
     <li class="l2"><a href="/boston/">Boston</a></li>
     <li class="l2"><a href="/chicago/">Chicago</a></li>
+{% endcomment %}
 </ul>

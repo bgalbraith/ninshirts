@@ -1,5 +1,5 @@
 from django.test import TestCase
-from catalog.models import Category, Product
+from apps.catalog.models import Category, Product
 
 class CatalogCategoryTestCase(TestCase):
     fixtures = ['catalog_testdata.yaml']
