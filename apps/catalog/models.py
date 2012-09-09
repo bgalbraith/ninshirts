@@ -20,10 +20,19 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+    PRODUCT_COLORS = (
+        ("n/a", "N/A"),
+        ("black", "Black"),
+        ("dark grey", "Dark Grey"),
+        ("green", "Green"),
+        ("red", "Red"),
+        ("white", "White")
+    )
+
     categories = models.ManyToManyField(Category)
     name = models.CharField(max_length=200)
     tag = models.CharField(max_length=200)
-    color = models.CharField(max_length=200)
+    color = models.CharField(max_length=20, choices=PRODUCT_COLORS)
     description = models.CharField(max_length=200)
     front = models.ImageField(upload_to='products', blank=True)
     back = models.ImageField(upload_to='products', blank=True)
