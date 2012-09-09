@@ -43,3 +43,36 @@ li.l3 {
 #product ul {
     text-align: left;
 }
+
+
+/******* PRODUCT DETAIL *******/
+
+#imageDetail img{
+	height:200px;
+	width:200px;
+}
+
+#imageViews ul{
+	padding:0px;
+	margin:0px;
+	list-style:none;
+}
+
+#imageViews ul li{
+	float:left;
+}
+
+#imageViews img{
+	height:100px;
+	width:100px;
+}
+#imageContainer{
+	float:left;
+	padding:10px;
+}
+#productDetail{
+float:left;
+}
+#productDescription{
+	padding:10px;
+}

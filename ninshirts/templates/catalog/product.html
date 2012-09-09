@@ -1,21 +1,35 @@
 {% extends 'catalog/base.html' %}
 
-{% block banner %}<h2>{{ product.name }}</h2>{% endblock %}
-
 {% block content %}
-<div id="product">
-<div class="grid_9 alpha omega">
-    <img width="200" height="200" src="/media/{{ product.front.url }}"/>
-    {% if product.back %}<img width="200" height="200" src="/static/img/{{ product.back.url }}"/>{% endif %}
+<div id="imageContainer">
+	<div id="imageDetail">
+		<img src="/media/{{ product.front.url }}">
+	</div>
+	{% if product.back %}
+	<div id="imageViews">
+		{% comment %}
+		<!-- I would like to process images upon upload, creating several size images - detail, zoom, and thumbnail. 
+		Anchor tags below would be to detail, img tags use thumbnail. 
+		Javascript would load the detail upon clicking the thumbnail. Rather than just front and back, a 'view' system might be nice - views a,b,c, etc.-->
+		{% endcomment %}
+		<ul>
+			<li><a href="/media/{{ product.front.url }}"><img src="/media/{{ product.front.url }}"></a></li>
+			<li><a href="/static/img/{{ product.back.url }}"><img src="/static/img/{{ product.back.url }}"></a></li>
+		</ul>
+	</div>
+	{% endif %}
 </div>
-<div class="grid_9">&nbsp;</div>
-<div class="grid_9 alpha omega">
-<ul>
-<li>Description: {{ product.description }}</li>
-<li>Color: {{ product.color }}</li>
-<li>Categories: {{ product.categories.all|join:', ' }}</li>
-</ul>
-</div>
+<div id="productDetail">
+	<h2>{{ product.name }}</h2>
+	<div id="productDescription">
+		{% if product.color != "n/a" %}{{ product.color }} {% endif %}
+		{% for category in product.categories %}{% if category == "Men's" | "Women's" %}{{ category }} {% endif %}{% endfor %} 
+		{% comment %}<!-- Rather than have t-shirt,hoodie,litho, etc. as a category, I would like to set those up as a 'productType' -->{% endcomment %}
+		{{ product.description }} 
+	</div>
+	<div id="relations">
+		{{ product.categories.all|join:', ' }}
+	</div>
 </div>
 {% endblock %}
 
