@@ -8,6 +8,9 @@ class Category(models.Model):
     left_id = models.IntegerField()
     right_id = models.IntegerField()
 
+    class Meta:
+        verbose_name_plural = 'categories'
+
     def __unicode__(self):
         return self.name
 
@@ -19,14 +22,15 @@ class Category(models.Model):
         return list(chain.from_iterable(products))
 
 
+
 class Product(models.Model):
     PRODUCT_COLORS = (
-        ("n/a", "N/A"),
-        ("black", "Black"),
-        ("dark grey", "Dark Grey"),
-        ("green", "Green"),
-        ("red", "Red"),
-        ("white", "White")
+        ('n/a', 'N/A'),
+        ('black', 'Black'),
+        ('dark grey', 'Dark Grey'),
+        ('green', 'Green'),
+        ('red', 'Red'),
+        ('white', 'White')
     )
 
     categories = models.ManyToManyField(Category)
