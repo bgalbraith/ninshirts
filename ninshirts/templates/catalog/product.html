@@ -13,8 +13,8 @@
 		Javascript would load the detail upon clicking the thumbnail. Rather than just front and back, a 'view' system might be nice - views a,b,c, etc.-->
 		{% endcomment %}
 		<ul>
-			<li><a href="/media/{{ product.front.url }}"><img src="/media/{{ product.front.url }}"></a></li>
-			<li><a href="/static/img/{{ product.back.url }}"><img src="/static/img/{{ product.back.url }}"></a></li>
+			<li><a href="{{ product.front.url }}"><img src="{{ product.front.url }}"></a></li>
+			<li><a href="{{ product.back.url }}"><img src="{{ product.back.url }}"></a></li>
 		</ul>
 	</div>
 	{% endif %}
