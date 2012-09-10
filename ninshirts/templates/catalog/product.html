@@ -23,7 +23,7 @@
 	<h2>{{ product.name }}</h2>
 	<div id="productDescription">
 		{% if product.color != "n/a" %}{{ product.color }} {% endif %}
-		{% for category in product.categories %}{% if category == "Men's" | "Women's" %}{{ category }} {% endif %}{% endfor %} 
+		{% for category in product.categories.all %}{% if category == "Men's" or "Women's" %}{{ category }} {% endif %}{% endfor %} 
 		{% comment %}<!-- Rather than have t-shirt,hoodie,litho, etc. as a category, I would like to set those up as a 'productType' -->{% endcomment %}
 		{{ product.description }} 
 	</div>
