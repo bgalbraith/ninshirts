@@ -3,3 +3,4 @@
 *.py[co]
 settings_local.py
 fabfile.py
+media
