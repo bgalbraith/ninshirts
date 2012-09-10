@@ -1,5 +1,5 @@
 .idea
 *~
-.py[co]
+*.py[co]
 settings_local.py
 fabfile.py
