@@ -1,29 +1,5 @@
 <ul>
-    {% for category in sidenav_categories %}
-        <li class=""><a href="/{{ category.tag }}">{{ category.name }}</a></li>
-    {% endfor %}
-{% comment %}
-  <li class="l1"><a href="/apparel/">Apparel</a></li>
-    <li class="l2"><a href="/shirts/">Shirts</a></li>
-      <li class="l3"><a href="/t-shirts/">T-Shirts</a></li>
-      <li class="l3"><a href="/hoodies/">Hoodies</a></li>
-      <li class="l3"><a href="/long-sleeve-shirts/">Long Sleeve Shirts</a></li>
-    <li class="l2"><a href="/mens/">Men's</a></li>
-    <li class="l2"><a href="/womens/">Women's</a></li>
-  <li class="l1"><a href="/posters/">Posters</a></li>
-  <li class="l1"><a href="/tours/">Tours</a></li>
-    <li class="l2"><a href="/live-with-teeth-tour/">Live: With Teeth</a></li>
-      <li class="l3"><a href="/live-with-teeth-summer-amphitheater-tour/">Summer Amphitheater Tour</a></li>
-  <li class="l1"><a href="/records/">Records</a></li>
-    <li class="l2"><a href="/pretty-hate-machine/">Pretty Hate Machine</a></li>
-    <li class="l2"><a href="/broken/">Broken</a></li>
-    <li class="l2"><a href="/the-downward-spiral/">The Downward Spiral</a></li>
-    <li class="l2"><a href="/with-teeth/">With Teeth</a></li>
-    <li class="l2"><a href="/year-zero/">Year Zero</a></li>
-    <li class="l2"><a href="/ghosts-i-iv/">Ghosts I-IV</a></li>
-    <li class="l2"><a href="/the-slip/">The Slip</a></li>
-  <li class="l1"><a href="/venues/">Venues</a></li>
-    <li class="l2"><a href="/boston/">Boston</a></li>
-    <li class="l2"><a href="/chicago/">Chicago</a></li>
-{% endcomment %}
+{% for category in sidenav_categories %}
+    <li class="l{{ category.depth }}"><a href="/{{ category.tag }}">{{ category.name }}</a></li>
+{% endfor %}
 </ul>

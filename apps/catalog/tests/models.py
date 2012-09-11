@@ -5,11 +5,25 @@ class CatalogCategoryTestCase(TestCase):
     fixtures = ['catalog_testdata.yaml']
 
     def test_products(self):
+        category = Category.objects.get(name='Apparel')
+        self.assertEqual(len(category.products()), 12)
+
         category = Category.objects.get(name='T-Shirts')
         self.assertEqual(len(category.products()), 8)
 
+    def test_depth(self):
         category = Category.objects.get(name='Apparel')
-        self.assertEqual(len(category.products()), 12)
+        self.assertEqual(category.depth(), 1)
+
+        category = Category.objects.get(name='T-Shirts')
+        self.assertEqual(category.depth(), 3)
+
+    def test_family(self):
+        category = Category.objects.get(name='Apparel')
+        self.assertEqual(len(category.family()), 8)
+
+        category = Category.objects.get(name='T-Shirts')
+        self.assertEqual(len(category.family()), 5)
 
 class CatalogProductTestCase(TestCase):
     fixtures = ['catalog_testdata.yaml']
