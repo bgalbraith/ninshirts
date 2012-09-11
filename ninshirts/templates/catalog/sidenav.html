@@ -1,6 +1,6 @@
 <ul>
-    {% for category in categories %}
-        <li class="{{ category.css }}"><a href="{{ category.url }}">{{ category.label }}</a></li>
+    {% for category in sidenav_categories %}
+        <li class=""><a href="/{{ category.tag }}">{{ category.name }}</a></li>
     {% endfor %}
 {% comment %}
   <li class="l1"><a href="/apparel/">Apparel</a></li>
