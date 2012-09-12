@@ -2,27 +2,8 @@
 
 {% block banner %}<h2>Merch</h2>{% endblock %}
 {% block content %}
-<div class="prefix_5 grid_4"><p>Pagination and filters</p></div>
-<div id="products">
-<div class="alpha grid_3"><p>img</p></div>
-<div class="grid_3"><p>img</p></div>
-<div class="grid_3 omega"><p>img</p></div>
-<div class="clear"></div>
-<div class="alpha grid_3"><p>img</p></div>
-<div class="grid_3"><p>img</p></div>
-<div class="grid_3 omega"><p>img</p></div>
-<div class="clear"></div>
-<div class="alpha grid_3"><p>img</p></div>
-<div class="grid_3"><p>img</p></div>
-<div class="grid_3 omega"><p>img</p></div>
+<div style="font-size:12pt;font-weight:bold;">
+<p>Welcome to ninshirts.com! This is ninshirts.com! At ninshirts.com, anything is possible!</p>
+<p>This is a fan project to catalog officially licensed Nine Inch Nails t-shirts and merchandise.</p>
 </div>
-
-
-{% comment %}
-{% for category in categories %}
-<div class="grid_3{% if forloop.first %} prefix_5{% endif %}{% if forloop.last %} suffix_5{% endif %}">
-<p><a href="{% url ninshirts.catalog.views.category category.tag %}">{{ category.name }}</a></p>
-</div>
-{% endfor %}
-{% endcomment %}
 {% endblock %}
