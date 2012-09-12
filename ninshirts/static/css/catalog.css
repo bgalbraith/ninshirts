@@ -60,6 +60,7 @@ li.l3 {
 
 #imageViews ul li{
 	float:left;
+	margin:0;
 }
 
 #imageViews img{
@@ -72,6 +73,10 @@ li.l3 {
 }
 #productDetail{
 float:left;
+}
+
+#productDetail h2{
+text-align:left;
 }
 #productDescription{
 	padding:10px;
