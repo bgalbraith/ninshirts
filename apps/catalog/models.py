@@ -62,6 +62,26 @@ class Category(models.Model):
 
 
 
+class optionType(models.Model):
+    name=models.CharField(max_length=200)
+    
+    class Meta:
+        verbose_name_plural = 'optionTypes'
+        
+    def __unicode__(self):
+        return self.name
+    
+class option(models.Model):
+    optionType=models.ForeignKey('OptionType')
+    name=models.CharField(max_length=200)
+    abbreviation=models.CharField(max_length=10)
+    
+    class Meta:
+        verbose_name_plural = 'options'
+        
+    def __unicode__(self):
+        return self.name
+    
 class Product(models.Model):
     PRODUCT_COLORS = (
         ('n/a', 'N/A'),
