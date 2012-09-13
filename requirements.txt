@@ -1,9 +1,8 @@
 Django==1.4
+django-imagekit
 fabric
-uwsgi
 south
 MySQL-python
 Pillow
-supervisor
 PyYAML
 
