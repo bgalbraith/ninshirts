@@ -5,8 +5,8 @@ class Category(models.Model):
     parent = models.ForeignKey('Category', null=True)
     name = models.CharField(max_length=200)
     tag = models.CharField(max_length=200)
-    left_id = models.IntegerField(unique=True)
-    right_id = models.IntegerField(unique=True)
+    left_id = models.IntegerField()
+    right_id = models.IntegerField()
 
     class Meta:
         verbose_name_plural = 'categories'
@@ -61,42 +61,27 @@ class Category(models.Model):
         return set(family)
 
 
+class OptionType(models.Model):
+    name = models.CharField(max_length=200)
 
-class optionType(models.Model):
-    name=models.CharField(max_length=200)
-    
-    class Meta:
-        verbose_name_plural = 'optionTypes'
-        
     def __unicode__(self):
         return self.name
-    
-class option(models.Model):
-    optionType=models.ForeignKey('OptionType')
-    name=models.CharField(max_length=200)
-    abbreviation=models.CharField(max_length=10)
-    
-    class Meta:
-        verbose_name_plural = 'options'
-        
+
+
+class Option(models.Model):
+    option_type = models.ForeignKey(OptionType)
+    name = models.CharField(max_length=200)
+    abbreviation = models.CharField(max_length=10)
+
     def __unicode__(self):
-        return self.name
-    
+        return "[%s] %s" % (self.option_type.name, self.name)
+
 class Product(models.Model):
-    PRODUCT_COLORS = (
-        ('n/a', 'N/A'),
-        ('black', 'Black'),
-        ('dark grey', 'Dark Grey'),
-        ('green', 'Green'),
-        ('red', 'Red'),
-        ('white', 'White')
-    )
-
     categories = models.ManyToManyField(Category)
     name = models.CharField(max_length=200)
     tag = models.CharField(max_length=200)
-    color = models.CharField(max_length=20, choices=PRODUCT_COLORS)
     description = models.CharField(max_length=200)
+    options = models.ManyToManyField(Option)
     front = models.ImageField(upload_to='products', blank=True)
     back = models.ImageField(upload_to='products', blank=True)
 
