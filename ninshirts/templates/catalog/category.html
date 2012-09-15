@@ -11,7 +11,7 @@
 {% endif %}
 <div class="grid_3{% if forloop.counter0|divisibleby:"3" %} alpha{% endif %}{% if forloop.counter0|add:"-2"|divisibleby:"3" %} omega{% endif %}">
     <a href="{% url apps.catalog.views.product category.tag product.tag %}">
-        <img width="200" height="200" src="{{ product.front.url }}"/>
+        <img width="200" height="200" src="{{ product.productimage_set.all.0.thumbnail.url }}"/>
     </a>
 </div>
 {% endfor %}

@@ -1,5 +1,7 @@
 from django.db import models
 from itertools import chain
+from imagekit.models import ImageSpecField
+from imagekit.processors import ResizeToFill
 
 class Category(models.Model):
     parent = models.ForeignKey('Category', null=True)
@@ -82,8 +84,6 @@ class Product(models.Model):
     tag = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
     options = models.ManyToManyField(Option)
-    front = models.ImageField(upload_to='products', blank=True)
-    back = models.ImageField(upload_to='products', blank=True)
 
     def __unicode__(self):
         return self.name
@@ -100,3 +100,19 @@ class Product(models.Model):
                 parent = parent.parent
 
         return categories
+
+class ProductImage(models.Model):
+    product = models.ForeignKey(Product)
+    original = models.ImageField(upload_to='products')
+    thumbnail = ImageSpecField([ResizeToFill(200,200)], format='JPEG',
+        image_field='original')
+    thumbnail_medium = ImageSpecField([ResizeToFill(100,100)], format='JPEG',
+        image_field='original')
+    thumbnail_tiny = ImageSpecField([ResizeToFill(50,50)], format='JPEG',
+        image_field='original')
+
+    class Meta:
+        order_with_respect_to = 'product'
+
+    def __unicode__(self):
+        return "%s [%d]" % (self.product.name, self._order)

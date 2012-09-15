@@ -90,142 +90,183 @@
   model: catalog.option
   pk: 6
 - fields:
-    back: products/4-of-us-are-dying-mens-t-back.jpg
     categories: [3, 6, 19]
     description: 4 Of Us Are Dying Men's T-Shirt
-    front: products/4-of-us-are-dying-mens-t.jpg
     name: 4 Of Us Are Dying Men's T-Shirt
     options: [2]
     tag: 4-of-us-are-dying-mens-t-shirt
   model: catalog.product
   pk: 1
 - fields:
-    back: products/art-is-resistance-womens-t-back.jpg
     categories: [3, 7, 17]
     description: Art Is Resistance Women's T-Shirt
-    front: products/art-is-resistance-womens-t.jpg
     name: Art Is Resistance Women's T-Shirt
     options: [3]
     tag: art-is-resistance-womens-t-shirt
   model: catalog.product
   pk: 2
 - fields:
-    back: ''
     categories: [3, 7, 18]
     description: Birds Women's T-Shirt
-    front: products/birds-womens-t.jpg
     name: Birds Women's T-Shirt
     options: [1]
     tag: birds-womens-t-shirt
   model: catalog.product
   pk: 3
 - fields:
-    back: ''
     categories: [8, 11, 16, 22]
     description: Boston 2006.06.23 Poster
-    front: products/boston-06-23-06.jpg
     name: Boston 2006.06.23 Poster
     options: [6]
     tag: boston-2006-06-23-poster
   model: catalog.product
   pk: 4
 - fields:
-    back: ''
     categories: [8, 11, 16, 21]
     description: Chicago 2006.07.01 Poster
-    front: products/chicago-07-01-06.jpg
     name: Chicago 2006.07.01 Poster
     options: [6]
     tag: chicago-2006-07-01-poster
   model: catalog.product
   pk: 5
 - fields:
-    back: products/broken-long-sleeve-back.jpg
     categories: [5, 14]
     description: Broken Long Sleeve Shirt
-    front: products/broken-long-sleeve.jpg
     name: Broken Long Sleeve Shirt
     options: [5]
     tag: broken-long-sleeve-shirt
   model: catalog.product
   pk: 6
 - fields:
-    back: products/discipline-mens-basic-t-back.jpg
     categories: [3, 6, 19]
     description: Discipline Men's T-Shirt
-    front: products/discipline-mens-basic-t.jpg
     name: Discipline Men's T-Shirt
     options: [1]
     tag: discipline-mens-t-shirt
   model: catalog.product
   pk: 7
 - fields:
-    back: ''
     categories: [3, 6, 19]
     description: Head Down Men's T-Shirt
-    front: products/head-down-mens-t.jpg
     name: Head Down Men's T-Shirt
     options: [2]
     tag: head-down-mens-t-shirt
   model: catalog.product
   pk: 8
 - fields:
-    back: products/eraser-t-back.jpg
     categories: [3, 6, 15]
     description: Eraser Men's T-Shirt
-    front: products/eraser-t.jpg
     name: Eraser Men's T-Shirt
     options: [1]
     tag: eraser-mens-t-shirt
   model: catalog.product
   pk: 9
 - fields:
-    back: ''
     categories: [4]
     description: Now I'm Nothing Hoodie
-    front: products/now-im-nothing-hooded-ls.jpg
     name: Now I'm Nothing Hoodie
     options: [1]
     tag: now-im-nothing-hoodie
   model: catalog.product
   pk: 10
 - fields:
-    back: ''
     categories: [4, 13]
     description: Pretty Hate Machine 2010 Hoodie
-    front: products/phm-2010-hoodie.jpg
     name: Pretty Hate Machine 2010 Hoodie
     options: [1]
     tag: pretty-hate-machine-2010-hoodie
   model: catalog.product
   pk: 11
 - fields:
-    back: products/phm-2010-mens-basic-t-back.jpg
     categories: [3, 6, 13]
     description: Pretty Hate Machine 2010 Men's T-Shirt
-    front: products/phm-2010-mens-basic-t.jpg
     name: Pretty Hate Machine 2010 Men's T-Shirt
     options: [1]
     tag: pretty-hate-machine-mens-t-shirt
   model: catalog.product
   pk: 12
 - fields:
-    back: products/sin-girls-t-back.jpg
     categories: [3, 7, 13]
     description: Sin Women's T-Shirt
-    front: products/sin-girls-t.jpg
     name: Sin Women's T-Shirt
     options: [4]
     tag: sin-womens-t-shirt
   model: catalog.product
   pk: 13
 - fields:
-    back: products/with-teeth-thermal-ls-back.jpg
     categories: [5, 16]
     description: With Teeth Thermal Long Sleeve Shirt
-    front: products/with-teeth-thermal-ls.jpg
     name: With Teeth Thermal Long Sleeve Shirt
     options: [1]
     tag: with-teeth-thermal-long-sleeve-shirt
   model: catalog.product
   pk: 14
+- fields: {_order: 0, original: products/4-of-us-are-dying-mens-t.jpg, product: 1}
+  model: catalog.productimage
+  pk: 5
+- fields: {_order: 0, original: products/with-teeth-thermal-ls.jpg, product: 14}
+  model: catalog.productimage
+  pk: 25
+- fields: {_order: 0, original: products/sin-girls-t.jpg, product: 13}
+  model: catalog.productimage
+  pk: 23
+- fields: {_order: 0, original: products/phm-2010-mens-basic-t.jpg, product: 12}
+  model: catalog.productimage
+  pk: 21
+- fields: {_order: 0, original: products/phm-2010-hoodie.jpg, product: 11}
+  model: catalog.productimage
+  pk: 20
+- fields: {_order: 0, original: products/now-im-nothing-hooded-ls.jpg, product: 10}
+  model: catalog.productimage
+  pk: 19
+- fields: {_order: 0, original: products/eraser-t.jpg, product: 9}
+  model: catalog.productimage
+  pk: 17
+- fields: {_order: 0, original: products/head-down-mens-t.jpg, product: 8}
+  model: catalog.productimage
+  pk: 16
+- fields: {_order: 0, original: products/discipline-mens-basic-t.jpg, product: 7}
+  model: catalog.productimage
+  pk: 14
+- fields: {_order: 0, original: products/broken-long-sleeve.jpg, product: 6}
+  model: catalog.productimage
+  pk: 12
+- fields: {_order: 0, original: products/chicago-07-01-06.jpg, product: 5}
+  model: catalog.productimage
+  pk: 11
+- fields: {_order: 0, original: products/boston-06-23-06.jpg, product: 4}
+  model: catalog.productimage
+  pk: 10
+- fields: {_order: 0, original: products/birds-womens-t.jpg, product: 3}
+  model: catalog.productimage
+  pk: 9
+- fields: {_order: 0, original: products/art-is-resistance-womens-t.jpg, product: 2}
+  model: catalog.productimage
+  pk: 7
+- fields: {_order: 1, original: products/broken-long-sleeve-back.jpg, product: 6}
+  model: catalog.productimage
+  pk: 13
+- fields: {_order: 1, original: products/with-teeth-thermal-ls-back.jpg, product: 14}
+  model: catalog.productimage
+  pk: 26
+- fields: {_order: 1, original: products/4-of-us-are-dying-mens-t-back.jpg, product: 1}
+  model: catalog.productimage
+  pk: 6
+- fields: {_order: 1, original: products/sin-girls-t-back.jpg, product: 13}
+  model: catalog.productimage
+  pk: 24
+- fields: {_order: 1, original: products/phm-2010-mens-basic-t-back.jpg, product: 12}
+  model: catalog.productimage
+  pk: 22
+- fields: {_order: 1, original: products/art-is-resistance-womens-t-back.jpg, product: 2}
+  model: catalog.productimage
+  pk: 8
+- fields: {_order: 1, original: products/eraser-t-back.jpg, product: 9}
+  model: catalog.productimage
+  pk: 18
+- fields: {_order: 1, original: products/discipline-mens-basic-t-back.jpg, product: 7}
+  model: catalog.productimage
+  pk: 15
+- fields: {_order: 2, original: products/with-teeth-thermal-ls-side.jpg, product: 14}
+  model: catalog.productimage
+  pk: 27

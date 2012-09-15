@@ -3,18 +3,19 @@
 {% block content %}
 <div id="imageContainer">
 	<div id="imageDetail">
-		<img src="{{ product.front.url }}">
+		<img src="{{ images.0.thumbnail.url }}">
 	</div>
-	{% if product.back %}
+    {% if images|length > 1 %}
 	<div id="imageViews">
 		{% comment %}
-		<!-- I would like to process images upon upload, creating several size images - detail, zoom, and thumbnail. 
-		Anchor tags below would be to detail, img tags use thumbnail. 
+		<!-- I would like to process images upon upload, creating several size images - detail, zoom, and thumbnail.
+		Anchor tags below would be to detail, img tags use thumbnail.
 		Javascript would load the detail upon clicking the thumbnail. Rather than just front and back, a 'view' system might be nice - views a,b,c, etc.-->
 		{% endcomment %}
 		<ul>
-			<li><a href="{{ product.front.url }}"><img src="{{ product.front.url }}"></a></li>
-			<li><a href="{{ product.back.url }}"><img src="{{ product.back.url }}"></a></li>
+            {% for image in images %}
+			<li><a href="{{ image.original.url }}"><img src="{{ image.thumbnail_medium.url }}"></a></li>
+            {% endfor %}
 		</ul>
 	</div>
 	{% endif %}
