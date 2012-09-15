@@ -11,6 +11,7 @@ class Category(models.Model):
     right_id = models.IntegerField()
 
     class Meta:
+        ordering = ['left_id']
         verbose_name_plural = 'categories'
 
     def __unicode__(self):
