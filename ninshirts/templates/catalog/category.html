@@ -1,6 +1,6 @@
 {% extends 'catalog/base.html' %}
 
-
+{% block title %}{{ category.name }}{% endblock %}
 {% block banner %}<h2>{{ category.name }}</h2>{% endblock %}
 {% block content %}
 <script type="text/javascript">
