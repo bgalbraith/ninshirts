@@ -1,9 +1,20 @@
 {% extends 'catalog/base.html' %}
 
 {% block content %}
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.productThumb').click(function(e) {
+            e.preventDefault();
+            var $this = $(this);
+			link = $this.attr('href');
+			$("#detailImage").attr('src', link);
+			$("#zoomLink").attr('href',link.replace('_thumbnail','').replace('/cache',''));
+		})
+	});
+</script>
 <div id="imageContainer">
-	<div id="imageDetail">
-		<img src="{{ images.0.thumbnail.url }}">
+	<div>
+		<a href="{{ images.0.original.url }}" id="zoomLink"><img id="detailImage" src="{{ images.0.thumbnail.url }}"></a>
 	</div>
     {% if images|length > 1 %}
 	<div id="imageViews">
@@ -14,7 +25,7 @@
 		{% endcomment %}
 		<ul>
             {% for image in images %}
-			<li><a href="{{ image.original.url }}"><img src="{{ image.thumbnail_medium.url }}"></a></li>
+			<li><a href="{{ image.thumbnail.url }}" class="productThumb"><img src="{{ image.thumbnail_medium.url }}"></a></li>
             {% endfor %}
 		</ul>
 	</div>

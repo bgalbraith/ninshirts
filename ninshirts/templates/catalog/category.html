@@ -4,17 +4,16 @@
 {% block banner %}<h2>{{ category.name }}</h2>{% endblock %}
 {% block content %}
 <script type="text/javascript">
-
-			$(document).ready(function(){
-				$('.browseImage').hover(function() {
-					 var $this = $(this);
-					 $this.next().fadeIn();
-				},
-				function() {
-					 var $this = $(this);
-					 $this.next().fadeOut();
-				})
-			});
+	$(document).ready(function(){
+		$('.browseImage').hover(function() {
+			 var $this = $(this);
+			 $this.next().fadeIn();
+		},
+		function() {
+			 var $this = $(this);
+			 $this.next().fadeOut();
+		})
+	});
 </script>
 <div class="prefix_5 grid_4"><p>Pagination and filters</p></div>
 <div id="products">
