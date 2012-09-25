@@ -45,6 +45,24 @@ li.l3 {
 }
 
 
+
+#footer  ul{
+	margin:20px;
+	overflow:auto;
+	text-align:center;
+}
+
+#footer ul li{	
+	display:inline;
+	margin-left:0;
+	padding:10px;
+	border-right:1px solid white;
+}
+#footer ul li.last{
+	border:0;
+}
+
+
 /******* PRODUCT DETAIL *******/
 
 #imageDetail img{
@@ -80,7 +98,7 @@ text-align:left;
 }
 #productDescription{
 	padding:10px;
-
+}
 body {
     background-color: #111111;
     color: white;
@@ -89,6 +107,7 @@ body {
 h1, h2, p {
     text-align: center;
 }
+
 
 a {
     text-decoration: none;
@@ -127,40 +146,26 @@ li.l3 {
     text-align: left;
 }
 
+/******* PRODUCT BROWSE *******/
 
-/******* PRODUCT DETAIL *******/
-
-#imageDetail img{
-	height:200px;
-	width:200px;
-}
-
-#imageViews ul{
-	padding:0px;
-	margin:0px;
-	list-style:none;
-}
-
-#imageViews ul li{
-	float:left;
-	margin:0;
+.title{
+	background-color:#333;
+	background: rgb(75, 75, 75) transparent;
+	background: rgba(75, 75, 75, 0.9);
+	padding:5px;
+	margin-top:-200px;
+	width:190px;
+	position:absolute;
+	text-align:center;
+	display:none;
 }
 
-#imageViews img{
-	height:100px;
-	width:100px;
-}
-#imageContainer{
-	float:left;
-	padding:10px;
-}
-#productDetail{
-float:left;
+.browseImage{
+height:200px;
+width:200px;
 }
 
-#productDetail h2{
-text-align:left;
-}
-#productDescription{
-	padding:10px;
+.productContainer{
+
+margin-bottom:40px;
 }
