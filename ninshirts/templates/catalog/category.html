@@ -4,18 +4,18 @@
 {% block banner %}<h2>{{ category.name }}</h2>{% endblock %}
 {% block content %}
 <script type="text/javascript">
-	$(document).ready(function(){
-		$('.browseImage').hover(function() {
-			 var $this = $(this);
-			 $this.next().fadeIn();
-		},
-		function() {
-			 var $this = $(this);
-			 $this.next().fadeOut();
-		})
-	});
+    $(document).ready(function(){
+        $('.browseImage').hover(function() {
+             var $this = $(this);
+             $this.next().fadeIn();
+        },
+        function() {
+             var $this = $(this);
+             $this.next().fadeOut();
+        })
+    });
 </script>
-<div class="prefix_5 grid_4"><p>Pagination and filters</p></div>
+<!---<div class="prefix_5 grid_4"><p>Pagination and filters</p></div>--->
 <div id="products">
 {% for product in category.products %}
 {% if forloop.counter0|divisibleby:"3" %}
@@ -23,7 +23,7 @@
 <div class="grid_3{% if forloop.counter0|divisibleby:"3" %} alpha{% endif %}{% if forloop.counter0|add:"-2"|divisibleby:"3" %} omega{% endif %} productContainer">
     <a href="{% url apps.catalog.views.product category.tag product.tag %}">
         <img class="browseImage" src="{{ product.productimage_set.all.0.thumbnail.url }}"/>
-		<div class="title">{{product.name}}</div>
+        <div class="title">{{product.name}}</div>
     </a>
 </div>
 {% endfor %}

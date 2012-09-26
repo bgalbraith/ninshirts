@@ -79,6 +79,11 @@ class Option(models.Model):
     def __unicode__(self):
         return "[%s] %s" % (self.option_type.name, self.name)
 
+    def type(self):
+        return self.option_type.name
+
+    
+
 class Product(models.Model):
     categories = models.ManyToManyField(Category)
     name = models.CharField(max_length=200)

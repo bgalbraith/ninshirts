@@ -5,26 +5,12 @@ body {
 
 h1, h2, p {
     text-align: center;
-	font-family: maven-pro, serif;
+    font-family: maven-pro, serif;
 }
 
 a {
     text-decoration: none;
     color: white;
-}
-
-ul {
-    list-style: none;
-}
-
-li.l2 {
-    position: relative;
-    left: 15px;
-}
-
-li.l3 {
-    position: relative;
-    left: 30px;
 }
 
 #top_nav p {
@@ -48,47 +34,47 @@ li.l3 {
 
 
 #footer  ul{
-	margin:20px;
-	overflow:auto;
-	text-align:center;
+    margin:20px;
+    overflow:auto;
+    text-align:center;
 }
 
-#footer ul li{	
-	display:inline;
-	margin-left:0;
-	padding:10px;
-	border-right:1px solid white;
+#footer ul li{    
+    display:inline;
+    margin-left:0;
+    padding:10px;
+    border-right:1px solid white;
 }
 #footer ul li.last{
-	border:0;
+    border:0;
 }
 
 
 /******* PRODUCT DETAIL *******/
 
 #imageDetail img{
-	height:200px;
-	width:200px;
+    height:200px;
+    width:200px;
 }
 
 #imageViews ul{
-	padding:0px;
-	margin:0px;
-	list-style:none;
+    padding:0px;
+    margin:0px;
+    list-style:none;
 }
 
 #imageViews ul li{
-	float:left;
-	margin:0;
+    float:left;
+    margin:0;
 }
 
 #imageViews img{
-	height:100px;
-	width:100px;
+    height:100px;
+    width:100px;
 }
 #imageContainer{
-	float:left;
-	padding:10px;
+    float:left;
+    padding:10px;
 }
 #productDetail{
 float:left;
@@ -97,9 +83,10 @@ float:left;
 #productDetail h2{
 text-align:left;
 }
-#productDescription{
-	padding:10px;
+#productDescription,#relations{
+    padding:10px;
 }
+
 body {
     background-color: #111111;
     color: white;
@@ -115,19 +102,6 @@ a {
     color: white;
 }
 
-ul {
-    list-style: none;
-}
-
-li.l2 {
-    position: relative;
-    left: 15px;
-}
-
-li.l3 {
-    position: relative;
-    left: 30px;
-}
 
 #top_nav p {
     background-color: #500000;
@@ -150,15 +124,15 @@ li.l3 {
 /******* PRODUCT BROWSE *******/
 
 .title{
-	background-color:#333;
-	background: rgb(75, 75, 75) transparent;
-	background: rgba(75, 75, 75, 0.9);
-	padding:5px;
-	margin-top:-200px;
-	width:190px;
-	position:absolute;
-	text-align:center;
-	display:none;
+    background-color:#333;
+    background: rgb(75, 75, 75) transparent;
+    background: rgba(75, 75, 75, 0.9);
+    padding:5px;
+    margin-top:-200px;
+    width:190px;
+    position:absolute;
+    text-align:center;
+    display:none;
 }
 
 .browseImage{
@@ -175,37 +149,71 @@ margin-bottom:40px;
 /* Top navigation */
 
 #topNav ul{
-	height:100px;
-	}
+    height:80px;
+    }
 #topNav ul li{
-	float:left;
-	margin:0;
-	margin-right:20px;
-	background-color:rgb(80,0,0);		
+    float:left;
+    margin:0;
+    margin-right:20px;
+    background-color:rgb(80,0,0);        
 }
 #topNav ul li a{
-	display:block;
-	padding: 22px 32px 22px 32px;
-	height:20px;	
-	font-family: maven-pro, serif;	
-	font-size:1.3em;
-	line-height:1;
+    display:block;
+    padding: 22px 36px 22px 36px;
+    height:20px;    
+    font-family: maven-pro, serif;    
+    font-size:1.3em;
+    line-height:1;
 }
 
 #siteTitle{
-	float:left;
+    float:left;
 }
 #top_nav{
-	float:right;
+    float:right;
 }
 #top_nav ul{
 margin-bottom:0;
+list-style:none;
 }
 #siteTitle{
-	padding:12px 30px 0 0;
+    padding:12px 30px 0 0;
 }
 #header{
-	padding-left:30px;
-	padding-top:20px;
-	overflow:auto;
+    padding-left:30px;
+    padding-top:20px;
+    overflow:auto;
+}
+
+#detailImage{
+margin-bottom:10px;
+}
+
+#sideNav{
+    margin:0;
+    list-style: none;
+}
+#sideNav li{
+    background-color:#333;
+    margin:0;
+    padding:0;
+    margin-bottom:1px;
+}
+
+#sideNav li a{
+display:block;
+padding:10px;
+}
+
+#sideNav li.l2{
+    background-color:#444;
+    padding-left:10px;
+}
+#sideNav li.l3{
+    background-color:#555;
+    padding-left:20px;
+}
+
+#sideNav li.active{
+    background-color:#666;
 }
