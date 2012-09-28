@@ -37,11 +37,9 @@ for k,v in products.items():
     product.save()
     color = Option.objects.get(abbreviation=v['color'])
     product.options.add(color)
-    product.save()
     for file in v['images']:
         img = product.productimage_set.create()
         content = ContentFile(zf.read(file))
         img.original.save(file, content)
-    product.save()
 
 zf.close()

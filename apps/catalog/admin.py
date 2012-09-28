@@ -38,6 +38,17 @@ class CategoryAdmin(admin.ModelAdmin):
 
         obj.save()
 
+    def delete_model(self, request, obj):
+        for c in Category.objects.filter(left_id__gt=obj.right_id):
+            c.left_id -= 2
+            c.save()
+        for c in Category.objects.filter(right_id__gte=obj.right_id):
+            c.right_id -= 2
+            c.save()
+
+        obj.product_set.clear()
+        obj.delete()
+
 admin.site.register(Category, CategoryAdmin)
 
 class ProductImageInline(admin.TabularInline):
@@ -47,9 +58,11 @@ class ProductImageInline(admin.TabularInline):
     admin_thumbnail = AdminThumbnail(image_field='thumbnail_tiny')
 
 class ProductAdmin(admin.ModelAdmin):
+    ordering = ['name']
     inlines = [
         ProductImageInline,
     ]
+
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Option)
 admin.site.register(OptionType)

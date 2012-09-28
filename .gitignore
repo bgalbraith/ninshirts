@@ -4,4 +4,4 @@
 settings_local.py
 fabfile.py
 media
-static
+/static/
