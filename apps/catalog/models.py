@@ -28,7 +28,7 @@ class Category(models.Model):
         for child in children:
             products.append(child.product_set.all())
 
-        return list(chain.from_iterable(products))
+        return set(chain.from_iterable(products))
 
     def depth(self):
         """
