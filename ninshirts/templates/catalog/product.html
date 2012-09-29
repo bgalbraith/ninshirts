@@ -9,13 +9,13 @@
             var $this = $(this);
             link = $this.attr('href');
             $("#detailImage").attr('src', link);
-            $("#zoomLink").attr('href',link.replace('_thumbnail','').replace('/cache',''));
+            $("#zoomLink").attr('href',link.replace('thumbnail','zoom'));
         })
     });
 </script>
 <div id="imageContainer">
     <div>
-        <a href="{{ images.0.original.url }}" id="zoomLink"><img id="detailImage" src="{{ images.0.thumbnail.url }}"></a>
+        <a href="{{ images.0.zoom.url }}" id="zoomLink"><img id="detailImage" src="{{ images.0.thumbnail.url }}"></a>
     </div>
     {% if images|length > 1 %}
     <div id="imageViews">

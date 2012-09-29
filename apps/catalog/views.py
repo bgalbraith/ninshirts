@@ -19,6 +19,9 @@ def product(request, category_tag, product_tag):
     if category in product.deep_categories():
         images = ProductImage.objects.filter(
             pk__in=product.get_productimage_order())
+        # force caching of zoom spec if needed
+        for image in images:
+            url = image.zoom.url
         return render_to_response('catalog/product.html',
             {'product': product, 'images': images},
             context_instance=RequestContext(request))

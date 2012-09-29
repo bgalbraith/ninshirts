@@ -110,6 +110,8 @@ class Product(models.Model):
 class ProductImage(models.Model):
     product = models.ForeignKey(Product)
     original = models.ImageField(upload_to='products')
+    zoom = ImageSpecField([ResizeToFill(500,500)], format='JPEG',
+        image_field='original')
     thumbnail = ImageSpecField([ResizeToFill(200,200)], format='JPEG',
         image_field='original')
     thumbnail_medium = ImageSpecField([ResizeToFill(100,100)], format='JPEG',
