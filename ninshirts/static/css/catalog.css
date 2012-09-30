@@ -71,11 +71,14 @@ a {
 #imageViews img{
     height:100px;
     width:100px;
+	padding-bottom:10px;
 }
 #imageContainer{
     float:left;
     padding:10px;
+	width:200px;
 }
+
 #productDetail{
 float:left;
 }

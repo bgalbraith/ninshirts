@@ -1,6 +1,6 @@
 {% extends 'catalog/base.html' %}
 
-{% block title %}{{ product.name }}{% endblock %}
+{% block title %}nin shirts > {{ product.name }}{% endblock %}
 {% block content %}
 <script type="text/javascript">
     $(document).ready(function(){
@@ -15,7 +15,7 @@
 </script>
 <div id="imageContainer">
     <div>
-        <a href="{{ images.0.zoom.url }}" id="zoomLink"><img id="detailImage" src="{{ images.0.thumbnail.url }}"></a>
+        <a href="{{ images.0.zoom.url }}" id="zoomLink"><img id="detailImage" src="{{ images.0.thumbnail.url }}" alt="{{ product.name }}" /></a>
     </div>
     {% if images|length > 1 %}
     <div id="imageViews">
@@ -26,7 +26,7 @@
         {% endcomment %}
         <ul>
             {% for image in images %}
-            <li><a href="{{ image.thumbnail.url }}" class="productThumb"><img src="{{ image.thumbnail_medium.url }}"></a></li>
+            <li><a href="{{ image.thumbnail.url }}" class="productThumb"><img src="{{ image.thumbnail_medium.url }}" alt="{{ product.name }}" /></a></li>
             {% endfor %}
         </ul>
     </div>

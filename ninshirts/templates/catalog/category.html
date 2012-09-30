@@ -1,6 +1,6 @@
 {% extends 'catalog/base.html' %}
 
-{% block title %}{{ category.name }}{% endblock %}
+{% block title %}nin shirts > {{ category.name }}{% endblock %}
 {% block banner %}<h2>{{ category.name }}</h2>{% endblock %}
 {% block content %}
 <script type="text/javascript">
@@ -22,7 +22,7 @@
 {% endif %}
 <div class="grid_3{% if forloop.counter0|divisibleby:"3" %} alpha{% endif %}{% if forloop.counter0|add:"-2"|divisibleby:"3" %} omega{% endif %} productContainer">
     <a href="{% url apps.catalog.views.product category.tag product.tag %}">
-        <img class="browseImage" src="{{ product.productimage_set.all.0.thumbnail.url }}"/>
+        <img class="browseImage" src="{{ product.productimage_set.all.0.thumbnail.url }}" alt="{{product.name}}"/>
         <div class="title">{{product.name}}</div>
     </a>
 </div>
