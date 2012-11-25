@@ -31,12 +31,11 @@ a {
     text-align: left;
 }
 
-
-
 #footer  ul{
     margin:20px;
     overflow:auto;
     text-align:center;
+	height: 30px;
 }
 
 #footer ul li{    
@@ -52,6 +51,26 @@ a {
 
 /******* PRODUCT DETAIL *******/
 
+#closeButton{
+	padding:10px; 
+	display:inline; 
+	background-color:#777777; 
+	position:absolute;
+	margin-right: -20px;
+	z-index:55;
+	cursor:pointer;
+}
+#imageZoom{
+	z-index:50;
+	position: absolute;
+	top:10px; 
+	width:600px; 
+	display:none;
+	margin-top:100px;
+}
+#imageZoom img{
+	vertical-align:top;
+}
 #imageDetail img{
     height:200px;
     width:200px;

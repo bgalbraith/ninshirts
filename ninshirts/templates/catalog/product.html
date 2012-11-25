@@ -11,6 +11,19 @@
             $("#detailImage").attr('src', link);
             $("#zoomLink").attr('href',link.replace('thumbnail','zoom'));
         })
+		$("#zoomLink").click(function(e){
+			e.preventDefault();
+			var $this = $(this);
+			link = $this.attr('href');
+			$("#zoomImage").attr('src',link);
+			$("#imageZoom").fadeIn(300);
+			return false;
+		});
+		
+		$('#closeButton').click(function(){
+			$("#imageZoom").fadeOut(400);
+		})
+		
     });
 </script>
 <div id="imageContainer">
@@ -48,6 +61,10 @@
     <div id="relations">
         Related Categories: {{ product.categories.all|join:', ' }}
     </div>
+</div>
+<div id="imageZoom">
+	<img src="{{images.0.zoom.url}}" id="zoomImage" alt="{{product.name}}" />
+	<div id="closeButton">close</div>
 </div>
 {% endblock %}
 
