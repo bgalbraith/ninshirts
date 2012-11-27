@@ -17,7 +17,7 @@
 </script>
 <!---<div class="prefix_5 grid_4"><p>Pagination and filters</p></div>--->
 <div id="products">
-{% for product in category.products %}
+{% for product in category.products|dictsortreversed:"id" %}
 {% if forloop.counter0|divisibleby:"3" %}
 {% endif %}
 <div class="grid_3{% if forloop.counter0|divisibleby:"3" %} alpha{% endif %}{% if forloop.counter0|add:"-2"|divisibleby:"3" %} omega{% endif %} productContainer">
